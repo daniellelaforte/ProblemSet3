@@ -27,3 +27,22 @@ var dashInsert = function (num) {
 
 
 dashInsert(454793);
+
+var ceaserCipher = function (str, num) {
+    var arr = str.split("")
+    var code;
+    for (var i=0; i<str.length; i++){
+        code = str.charCodeAt(i);
+        if ( ((code >= 65) && (code <= 90)) || ((code >= 97) &&                 (code <= 122)) ) {
+                arr[i]=String.fromCharCode(code+num)
+  
+        }
+  
+     } 
+       
+    return arr.join("");
+    
+}
+
+
+ceaserCipher("Caesar Cipher", 2);
